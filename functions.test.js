@@ -13,14 +13,14 @@ const nameCheck = () => console.log('Checking Name....');
 describe('Checking Names', () => {
   beforeEach(() => nameCheck());
 
-  test('User is Jeff', () => {
-    const user = 'Jeff';
-    expect(user).toBe('Jeff');
+  test('User is Mike', () => {
+    const user = 'Mike';
+    expect(user).toBe('Mike');
   });
 
-  test('User is Karen', () => {
-    const user = 'Karen';
-    expect(user).toBe('Karen');
+  test('User is Jessica', () => {
+    const user = 'Jessica';
+    expect(user).toBe('Jessica');
   });
 });
 
@@ -52,10 +52,10 @@ test('Should be falsy', () => {
 });
 
 // toEqual
-test('User should be Brad Traversy object', () => {
+test('User should be Bjoern Hansen object', () => {
   expect(functions.createUser()).toEqual({
-    firstName: 'Brad',
-    lastName: 'Traversy'
+    firstName: 'Bjoern',
+    lastName: 'Hansen'
   });
 });
 
