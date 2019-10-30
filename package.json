@@ -1,9 +1,10 @@
 {
   "name": "jest_testing",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "js_testing",
+  "main": "app.js",
   "scripts": {
+    "start": "webpack app.js --mode development --watch",
     "test": "jest",
     "testwatch": "jest --watch"
   },
