@@ -1,6 +1,7 @@
-exports.generateText = (name, age) => {
+const generateText = (name, age) => {
     // Returns output text
     return `${name} (${age} years old)`;
+    // return `Bjoern (38 years old)`;
   };
   
   exports.createElement = (type, text, className) => {
@@ -11,7 +12,7 @@ exports.generateText = (name, age) => {
     return newElement;
   };
   
-  exports.validateInput = (text, notEmpty, isNumber) => {
+  const validateInput = (text, notEmpty, isNumber) => {
     // Validate user input with two pre-defined rules
     if (!text) {
       return false;
@@ -24,3 +25,16 @@ exports.generateText = (name, age) => {
     }
     return true;
   };
+
+  exports.checkAndGenerate = (name, age) => {
+    if (!validateInput(name, true, false) || !validateInput(age, false, true)) {
+      return false;
+    }
+    return generateText(name, age);
+  };
+
+
+// export the function in case needed in other components
+// Node.js syntax
+  exports.generateText = generateText;
+  exports.validateInput - validateInput;

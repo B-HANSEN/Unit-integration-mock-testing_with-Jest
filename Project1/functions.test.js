@@ -3,11 +3,11 @@ const functions = require('./functions');
 // beforeEach(() => initDatabase());
 // afterEach(() => closeDatabase());
 
-beforeAll(() => initDatabase());
-afterAll(() => closeDatabase());
+// beforeAll(() => initDatabase());
+// afterAll(() => closeDatabase());
 
-const initDatabase = () => console.log('Database Initialized...');
-const closeDatabase = () => console.log('Database Closed...');
+// const initDatabase = () => console.log('Database Initialized...');
+// const closeDatabase = () => console.log('Database Closed...');
 
 
   // any kind of functionality to run before a test, use describe()-method, then beforeEach()-method
