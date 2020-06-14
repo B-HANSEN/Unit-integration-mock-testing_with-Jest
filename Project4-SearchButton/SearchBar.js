@@ -1,12 +1,11 @@
 import React from 'react';
-import SearchButton from './SearchButton';
+import SearchButton from './Button';
 
 const SearchBar = ({
 	handleKeyDown,
 	handleValueChange,
 	handleSearch,
 	query,
-	placeholder,
 }) => {
 	return (
 		<div>
@@ -19,7 +18,14 @@ const SearchBar = ({
 					onChange={handleValueChange}
 					onKeyDown={handleKeyDown}
 				/>
-				<SearchButton query={query} />
+				{query.trim() !== '' ? (
+					<SearchButton
+						buttonText='Search'
+						classNames='search-button'
+						handleClick={handleSearch}
+						// query={query}
+					/>
+				) : null}
 			</div>
 		</div>
 	);
